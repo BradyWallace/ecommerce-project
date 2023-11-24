@@ -17,6 +17,7 @@ NUMBER_OF_CATEGORIES.times do
       descrption: Faker::Hipster.sentence(word_count: rand(20..40)),
       price:      rand(5000..10_000).to_i
     )
+    puts(product.name, " created")
   end
 end
 
@@ -28,9 +29,10 @@ products = CSV.parse(prods_data, headers: true, encoding: "utf-8")
 category = Category.create(name: "Construction")
 
 products.each do |product|
-  prond = category.products.create(
+  prod = category.products.create(
     name:       product["name"],
     descrption: product["descrption"],
     price:      product["price"].to_i
   )
+  puts(prod.name, " created")
 end
