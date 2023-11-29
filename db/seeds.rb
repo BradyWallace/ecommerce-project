@@ -21,7 +21,7 @@ NUMBER_OF_CATEGORIES.times do
   end
 end
 
-# Category CSV
+# Products from CSV
 filename = Rails.root.join("db/prods.csv")
 prods_data = File.read(filename)
 products = CSV.parse(prods_data, headers: true, encoding: "utf-8")

@@ -3,7 +3,7 @@ class Product < ApplicationRecord
 
   def self.search(keywords)
     if keywords
-      where("name LIKE ? OR descrption LIKE ?", "%#{keywords}%", "%#{keywords}%"").order('id DESC'")
+      where("name LIKE ? OR descrption LIKE ?", "%#{keywords}%", "%#{keywords}%").order("id DESC")
     else
       order("id DESC")
     end
