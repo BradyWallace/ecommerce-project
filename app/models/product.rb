@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :category
 
-  validates :name, :descrption, :price, presence: true
+  validates :name, :descrption, :price, :category, presence: true
   validates :name, uniqueness: true
   validates :price, numericality: { only_integer: true }
 
