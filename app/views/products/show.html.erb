@@ -1,3 +1,10 @@
-<h1><%= @product.name %></h1>
+<h3><%= @product.name %></h3>
+<% if @product.image.present? %>
+  <div class="card-image">
+    <figure class="image">
+      <%= image_tag @product.image, style: "width:400px; height:450px;" %>
+    </figure>
+  </div>
 <p><%= @product.descrption %></p>
-<p><%= link_to @product.category.name, @product.category %></p>
+<p><%= number_to_currency (@product.price / 100) %></p>
+<% end %>
