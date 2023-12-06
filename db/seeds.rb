@@ -41,6 +41,7 @@ end
 #   )
 #   puts(prod.name, " created")
 # end
+
 Page.create(
   title:     "About Us",
   content:   "The data that powers this website is fake and untrustworthy. It was provided by faker, though.",
