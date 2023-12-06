@@ -21,5 +21,18 @@
     <%= submit_tag 'Search', name: nil %>
     <% end %>
     <%= yield %>
+    <br>
+    <hr>
+    <footer class="pl-5">
+      <p><em>Copywright Dev & B's General Goods 2023</em></p>
+      <br>
+      <ul class="m5-5" style="list-style: none;">
+        <li><%= link_to "Home", root_path %></li>
+
+        <% cms_pages.each do |page| %>
+          <li><%= link_to page.title, permalink_path(page.permalink) %></li>
+        <% end %>
+      </ul>
+    </footer>
   </body>
 </html>
