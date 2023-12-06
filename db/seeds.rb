@@ -6,7 +6,7 @@ Category.delete_all
 ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='categories';")
 
 NUMBER_OF_CATEGORIES = 4
-PRODUCTS_PER_CATEGORY = 25
+PRODUCTS_PER_CATEGORY = 5
 
 NUMBER_OF_CATEGORIES.times do
   category = Category.create(name: Faker::Commerce.unique.department)
@@ -36,3 +36,4 @@ products.each do |product|
   )
   puts(prod.name, " created")
 end
+AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password") if Rails.env.development?
