@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
       @products = category.products
     end
     @products = @products.search(params[:keywords])
+    @products = @products.page(params[:page]).per(10)
   end
 
   def show

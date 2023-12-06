@@ -19,7 +19,7 @@
     <%= text_field_tag :keywords, params[:keywords] %>
     <%= collection_select :category, :id, Category.all.order('name ASC'), :id, :name,{include_blank: 'Select Category'} %>
     <%= submit_tag 'Search', name: nil %>
-<% end %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

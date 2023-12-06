@@ -1,6 +1,11 @@
 <p>Showing <%= @products.count %> products.</p>
-<ul>
-  <% @products.each do |product| %>
-  <li><%= link_to product.name, product %></li>
-  <% end %>
-</ul>
+<div class="container text-center mx-auto" id="home_column">
+  <div class="row justify-content-start">
+    <% @products.each do |product| %>
+      <%= render partial: "product",
+                 object: product %>
+    <% end %>
+  </div>
+</div>
+
+<%= paginate @products %>
