@@ -5,6 +5,7 @@
       <%= image_tag @product.image, style: "width:400px; height:450px;" %>
     </figure>
   </div>
+<% end %>
 <p><%= @product.descrption %></p>
 <p><%= number_to_currency (@product.price / 100) %></p>
-<% end %>
+

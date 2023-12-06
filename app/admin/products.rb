@@ -4,7 +4,7 @@ ActiveAdmin.register Product do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :descrption, :price, :category_id
+  permit_params :name, :descrption, :price, :category_id, :image
   #
   # or
   #
@@ -13,4 +13,12 @@ ActiveAdmin.register Product do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+  form do |f|
+    f.semantic_errors
+    f.inputs
+    f.inputs do
+      f.input :image, as: :file, hint: f.object.image.present? ? image_tag(f.object.image, size: "100x100") : ""
+    end
+    f.actions
+  end
 end
