@@ -43,26 +43,6 @@
           <td><%= number_to_currency((@cart.sum { |product| product.price * (session[:cart][product.id.to_s] || 0) }) / 100) %></td>
           <td></td>
         </tr>
-        <tr>
-          <td colspan="4">PST:</td>
-          <td><%= calculate_pst(@cart) %></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td colspan="4">GST:</td>
-          <td><%= calculate_gst(@cart) %></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td colspan="4">HST:</td>
-          <td><%= calculate_hst(@cart) %></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td colspan="4">Total:</td>
-          <td><%= calculate_total_amount(@cart) %></td>
-          <td></td>
-        </tr>
       </tfoot>
     </table>
   <% end %>
