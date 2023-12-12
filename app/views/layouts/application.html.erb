@@ -13,7 +13,7 @@
   <body>
     <div>
       <h1>Dev & B's General Goods</h1>
-      <p><%= link_to "Home", root_path %> | <%= link_to "Categories", categories_path %></p>
+      <p><%= link_to "Home", root_path %> | <%= link_to "Categories", categories_path %> | <%= link_to "Cart", cart_index_path %></p>
     </div>
     <%= form_tag(products_path, method: :get) do %>
     <%= text_field_tag :keywords, params[:keywords] %>

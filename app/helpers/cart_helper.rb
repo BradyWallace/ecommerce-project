@@ -10,7 +10,7 @@ module CartHelper
 
     taxes += subtotal * pst_rate if pst_rate > 0
 
-    number_to_currency(taxes)
+    number_to_currency(taxes / 100)
   end
 
   def calculate_gst(cart)
@@ -24,7 +24,7 @@ module CartHelper
 
     taxes += subtotal * gst_rate if gst_rate > 0
 
-    number_to_currency(taxes)
+    number_to_currency(taxes / 100)
   end
 
   def calculate_hst(cart)
@@ -38,7 +38,7 @@ module CartHelper
 
     taxes += subtotal * hst_rate if hst_rate > 0
 
-    number_to_currency(taxes)
+    number_to_currency(taxes / 100)
   end
 
   def calculate_total_amount(cart)
@@ -67,6 +67,6 @@ module CartHelper
 
     total = subtotal + gst + pst + hst
 
-    number_to_currency(total)
+    number_to_currency(total / 100)
   end
 end
