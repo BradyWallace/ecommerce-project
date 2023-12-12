@@ -20,6 +20,8 @@
     <%= collection_select :category, :id, Category.all.order('name ASC'), :id, :name,{include_blank: 'Select Category'} %>
     <%= submit_tag 'Search', name: nil %>
     <% end %>
+    <br>
+    <hr>
     <%= yield %>
     <br>
     <hr>
