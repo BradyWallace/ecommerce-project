@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
     quantity = 1 if quantity <= 0  # Set quantity to 1 if not provided or invalid
     session[:cart][id] ||= 0
     session[:cart][id] += quantity
-    redirect_to cart_index_path
+    redirect_to cart_index_path, notice: "Product added to cart."
   end
 
   private
