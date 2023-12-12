@@ -23,7 +23,7 @@
           <tr>
             <td><%= product.name %></td>
             <td><%= product.descrption %></td>
-            <td><%= number_to_currency(product.price) %></td>
+            <td><%= number_to_currency(product.price / 100) %></td>
             <td><%= session[:cart][product.id.to_s] %></td>
             <td>
               <%= form_tag add_to_cart_path(product), method: :post do %>
