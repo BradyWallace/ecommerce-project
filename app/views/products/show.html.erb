@@ -8,4 +8,5 @@
 <% end %>
 <p><%= @product.descrption %></p>
 <p><%= number_to_currency (@product.price / 100) %></p>
+<%= button_to 'Add to cart', add_to_cart_path(@product.id), method: :post %>
 
