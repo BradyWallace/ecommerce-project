@@ -5,6 +5,8 @@ class Product < ApplicationRecord
   validates :name, uniqueness: true
   validates :price, numericality: { only_integer: true }
 
+  has_many :order_items
+  has_many :orders, through: :order_items
   has_one_attached :image
 
   def self.search(keywords)

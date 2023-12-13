@@ -45,4 +45,9 @@
         </tr>
       </tfoot>
     </table>
+    <%= form_tag(checkout_create_path, method: :post) do %>
+    <%= hidden_field_tag :product_ids, @cart.map(&:id) %>
+    <%= collection_select :province, :id, Province.all.order('name ASC'), :id, :name,{include_blank: 'Select Province'} %>
+    <%= submit_tag 'Checkout', name: nil, data: {turbo: false} %>
+    <% end %>
   <% end %>

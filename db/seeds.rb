@@ -26,21 +26,84 @@ NUMBER_OF_CATEGORIES.times do
   end
 end
 
-# Products from CSV
-# filename = Rails.root.join("db/prods.csv")
-# prods_data = File.read(filename)
-# products = CSV.parse(prods_data, headers: true, encoding: "utf-8")
-
-# category = Category.create(name: "Construction")
-
-# products.each do |product|
-#   prod = category.products.create(
-#     name:       product["name"],
-#     descrption: product["descrption"],
-#     price:      product["price"].to_i
-#   )
-#   puts(prod.name, " created")
-# end
+Province.create(
+  name: "Alberta",
+  pst:  0.00,
+  gst:  0.05,
+  hst:  0.00
+)
+Province.create(
+  name: "British Columbia",
+  pst:  0.07,
+  gst:  0.05,
+  hst:  0.00
+)
+Province.create(
+  name: "Manitoba",
+  pst:  0.07,
+  gst:  0.05,
+  hst:  0.00
+)
+Province.create(
+  name: "New Brunswick",
+  pst:  0.00,
+  gst:  0.00,
+  hst:  0.15
+)
+Province.create(
+  name: "Newfoundland and Labrador",
+  pst:  0.00,
+  gst:  0.00,
+  hst:  0.15
+)
+Province.create(
+  name: "Northwest Territories",
+  pst:  0.00,
+  gst:  0.05,
+  hst:  0.00
+)
+Province.create(
+  name: "Nova Scotia",
+  pst:  0.00,
+  gst:  0.00,
+  hst:  0.15
+)
+Province.create(
+  name: "Nunavut",
+  pst:  0.00,
+  gst:  0.05,
+  hst:  0.00
+)
+Province.create(
+  name: "Ontario",
+  pst:  0.00,
+  gst:  0.00,
+  hst:  0.13
+)
+Province.create(
+  name: "Prince Edward Island",
+  pst:  0.00,
+  gst:  0.00,
+  hst:  0.13
+)
+Province.create(
+  name: "Quebec",
+  pst:  0.10,
+  gst:  0.05,
+  hst:  0.00
+)
+Province.create(
+  name: "Saskatchewan",
+  pst:  0.06,
+  gst:  0.05,
+  hst:  0.00
+)
+Province.create(
+  name: "Yukon",
+  pst:  0.00,
+  gst:  0.05,
+  hst:  0.00
+)
 
 Page.create(
   title:     "About Us",

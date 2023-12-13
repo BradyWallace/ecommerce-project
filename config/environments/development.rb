@@ -67,4 +67,6 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  ENV["STRIPE_PUBLISHABLE_KEY"] = "pk_test_51OAJqrKF3OpjgS9M9FX2XeV8We8gFXMtg32JnHrSwj0Uz6WJ4DZpKCzxO1SxkVkUvPO5g7KPyKPyZ1P0kvggBf6i00EATTgL1N"
+  ENV["STRIPE_SECRET_KEY"] = "sk_test_51OAJqrKF3OpjgS9MPVKHtQ2Jc7n4qUb0RqsaVU1GfuI6suV5B2HKSosLz79EdJNU8ACwO1yWsJLHGmodziOegETs00cIkgWe8e"
 end
