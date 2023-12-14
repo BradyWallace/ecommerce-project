@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :cart, only: %i[index]
   get "/pages/:permalink" => "pages#permalink", as: "permalink"
   devise_for :admin_users, ActiveAdmin::Devise.config
+  resources :users, only: [:edit]
   ActiveAdmin.routes(self)
   resources :products, only: %i[index show]
   resources :categories, only: %i[index show]
