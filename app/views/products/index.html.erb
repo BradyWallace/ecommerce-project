@@ -1,3 +1,9 @@
+<% if user_signed_in? %>
+ <div> Welcome <%= current_user.email %> </div>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= button_to "Sign in", new_user_session_path %>
+<% end %>
 <div class="container text-center" style="margin: auto; width: 100%;" id="home_column">
   <div class="row justify-content-center" style="padding: 20px; width: 90%; display: flex; flex-wrap: wrap; justify-content: center;">
     <% @products.each do |product| %>
